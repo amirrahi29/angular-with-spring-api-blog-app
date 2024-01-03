@@ -1,0 +1,35 @@
+<div class="container" style="margin: 16px;">
+  <button class="btn btn-primary" routerLink="">View Blogs</button>
+</div>
+<hr/>
+
+<div style="width: 500px; background-color: antiquewhite; border-radius: 16px; margin: 16px; padding: 16px;">
+    <h3>Add Blog</h3>
+    <hr />
+    <form (ngSubmit)="postBlog()" [formGroup]="postBlogForm" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="text" name="title" placeholder="Enter blog title" class="form-control" formControlName="title" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="file" name="image" class="form-control" accept="image/*" (change)="onFileSelected($event)" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="col-md-12">
+          <div class="form-group">
+            <button type="submit" class="form-control" style="background-color: brown; color: white;">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
